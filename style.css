@@ -92,6 +92,9 @@
     padding: 15px 50px;
     font-weight: bolder;
 }
+.create-account:hover {
+    background-color: #596D48E0;
+}
 .login-btn {
     appearance: none;
     border: none;
