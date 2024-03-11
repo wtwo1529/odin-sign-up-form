@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url("Norse-Bold.otf") format('opentype');
+}
+:root {
+    font-size: 20px;
+    font-family: Arial;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 4;
+    background-color: rgb(178, 190, 181, 0.22);
+    height: 100vh;
+}
+
+.right-side>p {
+    padding: 0 35px;
+    font-weight: bolder;
+    width: 90%;
+    font-size: 24px;
+    margin-right: auto;
+    padding-left: 3.5%;
+    margin: 0;
+}
+.right-side>p:first-child {
+    margin-bottom: 30px;
+}
+.right-side>p:nth-child(2) {
+    margin-bottom: 35px;
+}
+.right-side .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10dvw;
+    padding-left: 3.5%;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+}
+.white-background {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border: 1px rgb(178, 190, 181, 0.17) solid;
+    box-shadow: 0px 15px 10px 1px rgb(0, 0, 0, 0.05);
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.btn-container {
+    display: flex;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-left: 3.5%;
+}
+button {
+    appearance: none;
+    border: none;
+    background-color: #596D48;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    padding: 15px 50px;
+    font-weight: bolder;
+}
+label {
+    text-transform: uppercase;
+    font-family: inherit;
+}
+form legend {
+    box-sizing: border-box;
+    padding-left: 3.5%;
+    font-size: 26px;
+    color: black;
+    font-weight: 600;
+}
+input[type] {
+    appearance: none;
+    box-sizing: border-box;
+    width: 300px;
+    height: 1.5rem;
+    border: 1px rgb(178, 190, 181, 0.35) solid;
+    box-shadow: 0px 0px 5px 0.2px rgb(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+.img-container {
+    height: 100%;
+    box-sizing: border-box;
+}
+.container img {
+    width: 32.7vw;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: contain;
+}
