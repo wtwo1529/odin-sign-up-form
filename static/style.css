@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Norse Bold';
-    src: url("Norse-Bold.otf") format('opentype');
+    src: url("../fonts/Norse-Bold.otf") format('opentype');
 }
 :root {
     font-size: 20px;
@@ -147,7 +147,7 @@ input[type="text"]:required:invalid, input[type="email"]:required:invalid {
 }
 .left-side {
     flex: 2;
-    background-image: url('halie-west-25xggax4bSA-unsplash.jpg');
+    background-image: url('../images/halie-west-25xggax4bSA-unsplash.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
     height: 100%;
