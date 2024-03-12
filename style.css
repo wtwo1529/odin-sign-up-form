@@ -55,6 +55,7 @@
     flex-direction: column;
     padding: 10px 0 ;
     width: 100%;
+    flex-wrap: wrap;
 }
 .white-background {
     display: flex;
@@ -130,13 +131,35 @@ input[type] {
     font-size: 20px;
     padding-left: 5px;
 }
+input[class="password"]:required::after {
+    content: "Minimum length 12 characters";
+    background-color: red;
+}
+input:focus {
+    border: 1px lightblue solid !important;
+}
+input[type="text"]:required:invalid, input[type="email"]:required:invalid {
+    border: 1px rgba(247, 104, 104, 0.75) solid;
+}
+input[type="text"]:valid, input[type="email"]:valid {
+    border: 1px green solid;
+}
+input:optional:valid {
+    border: inherit;
+}
+.valid {
+    border: 1px green solid !important;
+}
+.invalid {
+    border: 1px rgba(247, 104, 104, 0.75) solid !important;
+}
 .left-side {
     flex: 2;
     background-image: url('halie-west-25xggax4bSA-unsplash.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
     height: 100%;
-    min-width: 400px;
+    min-width: 30vw;
 }
 .logo-container {
     background-color: rgba(144, 146, 144, 0.48);

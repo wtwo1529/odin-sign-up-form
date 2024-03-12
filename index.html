@@ -25,7 +25,7 @@
                 Sign up <em>now</em> to get started
             </p>
             <p class="p2">You <em>know</em> you want to.</p>
-            <form class="form-container">
+            <form id="signup-form" class="form-container">
                 <div class="white-background">
                     <legend>
                         Let's do this!
@@ -33,17 +33,17 @@
                     <div class="row">
                         <div class="column">
                             <label for="first-name">First Name</label>
-                            <input type="text">
+                            <input class="firstname-field" type="text">
                         </div>
                         <div class="column">
                             <label for="last-name">Last Name</label>
-                            <input type="text">
+                            <input class="lastname-field" type="text">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
                             <label for="email">email</label>
-                        <input type="email">
+                        <input class="email-field" type="email">
                     </div>
                     <div class="column">
                         <label for="phone-number">phone number</label>
@@ -53,19 +53,22 @@
                 <div class="row">
                     <div class="column">
                         <label for="password">password</label>
-                        <input type="password">
+                        <input class="password" type="password">
                     </div>
                     <div class="column">
                         <label for="confirm-password">confirm password</label>
-                        <input type="password">
+                        <input class="confirm-password" type="password">
                     </div>
+                </div>
+                <div>
+                    <p class="password-status"></p>
                 </div>
             </div>
                 <div class="btn-container">
                     <button type="submit" class="create-account">Create Account</button>
                 </div>
                 <p class="login">
-                    Already have an account? <span class="btn"><button class="login-btn">Log In</button></span>
+                    Already have an account? <span class="btn"><button type="button" class="login-btn">Log In</button></span>
                 </p>
             </form>
         </div>
