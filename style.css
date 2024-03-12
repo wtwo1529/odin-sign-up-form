@@ -124,25 +124,20 @@ input[type] {
     box-sizing: border-box;
     width: 300px;
     height: 1.5rem;
-    border: 1px rgb(178, 190, 181, 0.35) solid;
-    background-color: rgb(178, 190, 181, 0.025);
+    border: 1px rgba(105, 107, 105, 0.35)solid;
+    background-color: rgb(178, 190, 181, 0.015);
     box-shadow: 0px 0px 5px 0.2px rgb(0, 0, 0, 0.05);
     border-radius: 4px;
     font-size: 20px;
     padding-left: 5px;
 }
-input[class="password"]:required::after {
-    content: "Minimum length 12 characters";
-    background-color: red;
-}
-input:focus {
-    border: 1px lightblue solid !important;
+input[type]:focus-visible {
+    border: 1px rgba(162, 214, 231, 0.822) solid !important;
+    box-shadow: 0px 0px 5px 0.2px rgba(3, 110, 160, 0.685);
+    outline: none;
 }
 input[type="text"]:required:invalid, input[type="email"]:required:invalid {
     border: 1px rgba(247, 104, 104, 0.75) solid;
-}
-input:optional:valid {
-    border: inherit;
 }
 .valid {
     border: 1px green solid !important;
