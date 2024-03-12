@@ -141,9 +141,6 @@ input:focus {
 input[type="text"]:required:invalid, input[type="email"]:required:invalid {
     border: 1px rgba(247, 104, 104, 0.75) solid;
 }
-input[type="text"]:valid, input[type="email"]:valid {
-    border: 1px green solid;
-}
 input:optional:valid {
     border: inherit;
 }

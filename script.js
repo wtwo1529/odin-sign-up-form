@@ -73,25 +73,29 @@ function validatePasswords() {
     }
 }
 
+function validateEmail() {
+    const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+    if (emailRegex.test(inputEmail.value) == true) {
+        inputEmail.classList.remove("invalid");
+        inputEmail.classList.add('valid');
+        return true;
+    }
+    inputEmail.classList.remove('valid');
+    inputEmail.classList.add('invalid');
+    return false;
+}
+
+inputEmail.addEventListener('input', validateEmail);
+
 const form = document.querySelector(".form-container"); 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    // if (validatePasswords() != true) {
-    //     password.classList.remove("valid");
-    //     password.classList.add("invalid");
-    //     confirmPassword.classList.remove("valid");
-    //     confirmPassword.classList.add("invalid");
-    //     return;
-    // } 
-    // if (validateFirstName() != true) {
-    //     inputFirstName.classList.remove("invalid");
-    //     inputFirstName.classList.add("valid");
-    //     return;
-    // }
-    // if (validateLastName() != true) {
-    //     inputLastName.classList.remove("valid");
-    //     inputLastName.classList.add("invalid");
-    //     return;
-    // }
-    // form.submit();
+    inputFirstName.setAttribute('required', '');
+    inputLastName.setAttribute('required', '');
+    password.setAttribute('required', '');
+    confirmPassword.setAttribute('required', '');
+    inputEmail.setAttribute('required', '');
+    if (validatePasswords() == true && validateFirstName() == true && validateLastName() == true && validateEmail() == true) {
+        form.submit();
+    }
 })
